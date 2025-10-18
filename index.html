@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empresa Policatos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <header>
+    <h1>Empresa Policatos</h1>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul id="nav-links">
+        <li><a href="#empresa">Nuestra Empresa</a></li>
+        <li><a href="#catalogo">Catálogo de Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="empresa" class="contenido-transparente">
+      <h2>Sobre Nosotros</h2>
+      <p>Policatos es una empresa dedicada a ofrecer productos de alta calidad, con un compromiso firme con la satisfacción de nuestros clientes.</p>
+    </section>
+
+    <section id="catalogo" class="contenido-transparente">
+      <h2>Catálogo de Productos</h2>
+      <div class="productos">
+        <article class="producto">
+          <img src="productos/producto1.jpg" alt="Producto 1" />
+          <h3>Producto 1</h3>
+          <p>Descripción breve del producto 1.</p>
+        </article>
+
+        <article class="producto">
+          <img src="productos/producto2.jpg" alt="Producto 2" />
+          <h3>Producto 2</h3>
+          <p>Descripción breve del producto 2.</p>
+        </article>
+
+        <article class="producto">
+          <img src="productos/producto3.jpg" alt="Producto 3" />
+          <h3>Producto 3</h3>
+          <p>Descripción breve del producto 3.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="contenido-transparente">
+      <h2>Contacto</h2>
+      <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="respuesta"></div>
+    </section>
+  </main>
+
+  <footer class="contenido-transparente">
+    <p>© 2025 Policatos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
