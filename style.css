@@ -15,7 +15,7 @@ body, html {
   background-size: cover;
 }
 
-/* Overlay oscuro para mejorar lectura */
+/* Overlay oscuro */
 .overlay {
   position: fixed;
   top: 0;
@@ -26,6 +26,7 @@ body, html {
   z-index: 0;
 }
 
+/* HEADER */
 header {
   position: relative;
   z-index: 1;
@@ -49,13 +50,11 @@ nav {
   align-items: center;
 }
 
-/* Menú principal */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 30px;
-  z-index: 10;
 }
 
 nav ul li a {
@@ -75,7 +74,7 @@ nav ul li a:hover {
 
 /* Botón hamburguesa */
 .menu-toggle {
-  display: none; /* oculto por defecto */
+  display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -93,6 +92,7 @@ nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
+/* MAIN */
 main {
   position: relative;
   z-index: 1;
@@ -110,13 +110,20 @@ main {
   margin-bottom: 40px;
 }
 
-h2 {
-  color: #004aad;
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-align: center;
+/* Transiciones entre secciones */
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
+.visible {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* Productos */
 .productos {
   display: flex;
   flex-wrap: wrap;
@@ -142,7 +149,6 @@ h2 {
   width: 100%;
   height: 190px;
   object-fit: cover;
-  display: block;
 }
 
 .producto h3 {
@@ -151,11 +157,12 @@ h2 {
 }
 
 .producto p {
-  margin: 0 15px 15px 15px;
+  margin: 0 15px 15px;
   color: #444;
   font-size: 0.95rem;
 }
 
+/* Formulario */
 form label {
   display: block;
   margin: 15px 0 6px;
@@ -169,12 +176,6 @@ form input, form textarea {
   border: 1.8px solid #004aad;
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-form input:focus, form textarea:focus {
-  border-color: #002f6c;
-  outline: none;
 }
 
 form button {
@@ -193,12 +194,6 @@ form button {
 
 form button:hover {
   background-color: #002f6c;
-}
-
-#respuesta {
-  margin-top: 18px;
-  font-weight: 600;
-  color: #007700;
 }
 
 /* Footer */
@@ -222,7 +217,6 @@ footer.contenido-transparente {
     border-radius: 10px;
     flex-direction: column;
     width: 180px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   }
 
   nav ul.active {
