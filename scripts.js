@@ -20,18 +20,17 @@ function mostrarSeccion(id) {
       sec.classList.add('hidden');
     }
   });
-  navLinks.classList.remove('active');
+  navLinks.classList.remove('active'); // Cierra menú móvil al seleccionar
 }
 
-// Mostrar solo la primera sección al iniciar
+// Mostrar sección inicial
 mostrarSeccion('empresa');
 
-// Detectar clics en los enlaces del menú
+// Evento de clic para navegación
 links.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    const seccionId = link.dataset.section;
-    mostrarSeccion(seccionId);
+    mostrarSeccion(link.dataset.section);
   });
 });
 
