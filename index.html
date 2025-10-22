@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Empresa Policatos</title>
-  <meta name="description" content="Empresa Policatos - Productos de alta calidad y compromiso con la satisfacción de nuestros clientes.">
+  <meta name="description" content="Empresa Policatos - Productos de alta calidad en alimentos y bebidas.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,52 +20,99 @@
       </div>
       <ul id="nav-links">
         <li><a href="#empresa" data-section="empresa">Nuestra Empresa</a></li>
-        <li><a href="#catalogo" data-section="catalogo">Catálogo de Productos</a></li>
+        <li><a href="#catalogo" data-section="catalogo">Catálogo</a></li>
         <li><a href="#contacto" data-section="contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <!-- SECCIÓN EMPRESA -->
     <section id="empresa" class="contenido-transparente visible">
       <h2>Sobre Nosotros</h2>
-      <p>
-        Policatos es una empresa dedicada a ofrecer productos de alta calidad, con un compromiso firme con la satisfacción de nuestros clientes.
-        Nos destacamos por la innovación y el servicio personalizado.
-      </p>
+      <p>Policatos es una empresa dedicada a ofrecer productos de alta calidad, con un compromiso firme con la satisfacción de nuestros clientes. Nos destacamos por la innovación y el servicio personalizado.</p>
     </section>
 
+    <!-- SECCIÓN CATÁLOGO -->
     <section id="catalogo" class="contenido-transparente hidden">
       <h2>Catálogo de Productos</h2>
+
+      <h3 class="subtitulo-categoria">Alimentos</h3>
       <div class="productos">
         <article class="producto">
-          <img src="productos/producto1.jpg" alt="Producto 1 - Detergente ecológico" />
-          <h3>Producto 1</h3>
-          <p>Descripción breve del producto 1.</p>
+          <img src="productos/pan.jpg" alt="Pan artesanal">
+          <h4>Pan artesanal</h4>
+          <p>Delicioso pan horneado cada mañana.</p>
         </article>
 
         <article class="producto">
-          <img src="productos/producto2.jpg" alt="Producto 2 - Limpiador multiusos" />
-          <h3>Producto 2</h3>
-          <p>Descripción breve del producto 2.</p>
+          <img src="productos/galletas.jpg" alt="Galletas dulces">
+          <h4>Galletas dulces</h4>
+          <p>Con chispas de chocolate, crujientes y frescas.</p>
         </article>
 
         <article class="producto">
-          <img src="productos/producto3.jpg" alt="Producto 3 - Desinfectante industrial" />
-          <h3>Producto 3</h3>
-          <p>Descripción breve del producto 3.</p>
+          <img src="productos/torta.jpg" alt="Torta de vainilla">
+          <h4>Torta de vainilla</h4>
+          <p>Bizcocho esponjoso con glaseado artesanal.</p>
+        </article>
+
+        <article class="producto">
+          <img src="productos/empanadas.jpg" alt="Empanadas rellenas">
+          <h4>Empanadas rellenas</h4>
+          <p>De carne o pollo, con masa dorada y crujiente.</p>
+        </article>
+
+        <article class="producto">
+          <img src="productos/pastel.jpg" alt="Pastel de pollo">
+          <h4>Pastel de pollo</h4>
+          <p>Masa crujiente y relleno cremoso de pollo.</p>
+        </article>
+      </div>
+
+      <h3 class="subtitulo-categoria">Bebidas</h3>
+      <div class="productos">
+        <article class="producto">
+          <img src="productos/jugo-naranja.jpg" alt="Jugo de naranja natural">
+          <h4>Jugo de naranja natural</h4>
+          <p>Refrescante, 100% natural sin conservantes.</p>
+        </article>
+
+        <article class="producto">
+          <img src="productos/cafe.jpg" alt="Café colombiano">
+          <h4>Café colombiano</h4>
+          <p>Aroma intenso y sabor balanceado.</p>
+        </article>
+
+        <article class="producto">
+          <img src="productos/malteada.jpg" alt="Malteada de chocolate">
+          <h4>Malteada de chocolate</h4>
+          <p>Cremosa, elaborada con helado artesanal.</p>
+        </article>
+
+        <article class="producto">
+          <img src="productos/te-verde.jpg" alt="Té verde frío">
+          <h4>Té verde frío</h4>
+          <p>Natural, con antioxidantes y sabor refrescante.</p>
+        </article>
+
+        <article class="producto">
+          <img src="productos/refresco.jpg" alt="Refresco artesanal">
+          <h4>Refresco artesanal</h4>
+          <p>Con frutas tropicales y bajo contenido de azúcar.</p>
         </article>
       </div>
     </section>
 
+    <!-- SECCIÓN CONTACTO -->
     <section id="contacto" class="contenido-transparente hidden">
       <h2>Contacto</h2>
       <form id="contactForm">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
+        <input type="text" id="nombre" name="nombre" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" required>
 
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
