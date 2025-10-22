@@ -1,98 +1,67 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* === RESETEO BÁSICO === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body, html {
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
-  position: relative;
-  overflow-x: hidden;
   background: url('Assets/Img/desayunos-en-barranquilla.jpg') no-repeat center center fixed;
   background-size: cover;
+  overflow-x: hidden;
 }
 
-/* Overlay oscuro */
+/* === FONDO OSCURO === */
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.6);
   z-index: 0;
 }
 
-/* HEADER */
+/* === ENCABEZADO === */
 header {
   position: relative;
   z-index: 1;
-  background: transparent;
   padding: 25px 0;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.7);
-  margin-bottom: 30px;
 }
 
 header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 12px;
+  font-size: 2.5rem;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
-nav {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
+nav { display: flex; justify-content: center; align-items: center; position: relative; }
+nav ul { list-style: none; display: flex; gap: 25px; }
 nav ul li a {
   color: #fff;
+  text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
-  text-decoration: none;
   padding: 6px 14px;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  transition: 0.3s;
 }
+nav ul li a:hover { background-color: rgba(255,255,255,0.25); }
 
-nav ul li a:hover {
-  background-color: rgba(255,255,255,0.25);
-}
-
-/* Botón hamburguesa */
+/* === MENÚ HAMBURGUESA === */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
   cursor: pointer;
   position: absolute;
-  right: 20px;
-  top: 35px;
-  z-index: 1001;
+  right: 20px; top: 35px;
+  gap: 5px;
 }
-
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
+.bar {
+  width: 25px; height: 3px;
   background-color: #fff;
   border-radius: 5px;
-  transition: all 0.3s ease;
 }
 
-/* MAIN */
+/* === CONTENIDO === */
 main {
   position: relative;
   z-index: 1;
@@ -102,7 +71,7 @@ main {
 }
 
 .contenido-transparente {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255,255,255,0.85);
   color: #222;
   padding: 25px 30px;
   border-radius: 12px;
@@ -110,74 +79,46 @@ main {
   margin-bottom: 40px;
 }
 
-/* Transiciones entre secciones */
-.hidden {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+h2 { color: #004aad; text-align: center; margin-bottom: 20px; font-weight: 700; }
+.subtitulo-categoria {
+  text-align: left;
+  color: #004aad;
+  font-size: 1.6rem;
+  margin: 30px 0 20px;
+  border-left: 5px solid #004aad;
+  padding-left: 10px;
+  font-weight: 700;
 }
 
-.visible {
-  display: block;
-  opacity: 1;
-  transition: opacity 0.4s ease;
-}
-
-/* Productos */
+/* === PRODUCTOS === */
 .productos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 30px;
 }
-
 .producto {
   background-color: #fff;
   border-radius: 10px;
-  width: 300px;
+  width: 280px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
+.producto:hover { transform: translateY(-8px); box-shadow: 0 14px 30px rgba(0,0,0,0.3); }
+.producto img { width: 100%; height: 190px; object-fit: cover; }
+.producto h4 { margin: 15px; color: #004aad; }
+.producto p { margin: 0 15px 15px; color: #444; font-size: 0.95rem; }
 
-.producto:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.3);
-}
-
-.producto img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-}
-
-.producto h3 {
-  margin: 15px;
-  color: #004aad;
-}
-
-.producto p {
-  margin: 0 15px 15px;
-  color: #444;
-  font-size: 0.95rem;
-}
-
-/* Formulario */
-form label {
-  display: block;
-  margin: 15px 0 6px;
-  font-weight: 600;
-  color: #004aad;
-}
-
+/* === FORMULARIO === */
+form label { display: block; margin: 15px 0 6px; font-weight: 600; color: #004aad; }
 form input, form textarea {
   width: 100%;
-  padding: 10px 12px;
+  padding: 10px;
   border: 1.8px solid #004aad;
   border-radius: 8px;
   font-size: 1rem;
 }
-
 form button {
   margin-top: 25px;
   background-color: #004aad;
@@ -189,50 +130,38 @@ form button {
   cursor: pointer;
   font-weight: 700;
   transition: background-color 0.3s ease;
-  box-shadow: 0 6px 14px rgba(0, 74, 173, 0.7);
 }
+form button:hover { background-color: #002f6c; }
 
-form button:hover {
-  background-color: #002f6c;
-}
-
-/* Footer */
+/* === PIE DE PÁGINA === */
 footer.contenido-transparente {
   text-align: center;
   font-size: 0.9rem;
   color: #555;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255,255,255,0.9);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Responsive */
-@media (max-width: 800px) {
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  header h1 { font-size: 2rem; }
+
   nav ul {
     display: none;
     position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: rgba(0,0,0,0.85);
+    top: 70px; right: 20px;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
     padding: 20px;
     border-radius: 10px;
-    flex-direction: column;
-    width: 180px;
+    width: 220px;
   }
+  nav ul.active { display: flex; animation: fadeIn 0.3s ease forwards; }
+  .menu-toggle { display: flex; }
 
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .productos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .producto {
-    width: 90%;
-  }
+  .productos { flex-direction: column; align-items: center; }
+  .producto { width: 95%; }
+  h2 { font-size: 1.8rem; }
+  .subtitulo-categoria { font-size: 1.4rem; }
 }
+@keyframes fadeIn { from {opacity: 0; transform: translateY(-10px);} to {opacity: 1; transform: translateY(0);} }
