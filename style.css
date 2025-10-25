@@ -353,3 +353,63 @@ body {
     top: 25px;
   }
 }
+
+/* --- MENÚ HAMBURGUESA FIJO Y FUNCIONAL --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.menu-toggle .bar {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/* --- MENÚ DESPLEGABLE MÓVIL --- */
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 70px; /* debajo del botón */
+    right: 10px;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    z-index: 1500;
+    width: 200px;
+    text-align: right;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: #004aad;
+    padding: 10px;
+    font-weight: 600;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
