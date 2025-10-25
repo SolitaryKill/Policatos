@@ -26,25 +26,24 @@ document.addEventListener('click', (event) => {
 const sections = document.querySelectorAll('main section');
 const links = document.querySelectorAll('#nav-links a');
 
-// Función para mostrar una sola sección con animación
 function mostrarSeccion(id) {
   sections.forEach(sec => {
     if (sec.id === id) {
       sec.classList.remove('hidden');
-      sec.classList.add('visible', 'fade-in');
-      // eliminar clase fade-in tras animación
-      setTimeout(() => sec.classList.remove('fade-in'), 400);
+      sec.classList.add('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Hace scroll al inicio
     } else {
       sec.classList.remove('visible');
       sec.classList.add('hidden');
     }
   });
-  // Cierra el menú en móviles
-  navLinks.classList.remove('active');
+  navLinks.classList.remove('active'); // Cierra el menú móvil
 }
 
 // Mostrar solo la sección "empresa" al iniciar
-mostrarSeccion('empresa');
+document.addEventListener('DOMContentLoaded', () => {
+  mostrarSeccion('empresa');
+});
 
 // Detectar clics en los enlaces del menú
 links.forEach(link => {
