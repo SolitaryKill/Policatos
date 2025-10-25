@@ -1,23 +1,22 @@
-/* Reset básico */
+/* --- RESET BÁSICO --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-
+/* --- CONFIGURACIÓN GLOBAL --- */
 body, html {
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   position: relative;
   overflow-x: hidden;
-  background: url('C:\Users\Estudio\Desktop\pagina\assest\img\3bcb65fb-e189-4e37-aeee-8ba4d1a72286.css') no-repeat center center fixed;
+  background: url('assest/img/fondo.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Overlay oscuro */
+/* --- CAPA OSCURA DE FONDO --- */
 .overlay {
   position: fixed;
   top: 0;
@@ -28,7 +27,7 @@ body, html {
   z-index: 0;
 }
 
-/* HEADER */
+/* --- HEADER --- */
 header {
   position: relative;
   z-index: 1;
@@ -45,6 +44,7 @@ header h1 {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
+/* --- NAVEGACIÓN --- */
 nav {
   position: relative;
   display: flex;
@@ -80,11 +80,11 @@ nav ul li a:hover {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  position: fixed;           /* se mantiene fija en pantalla */
-  right: 15px;               /* completamente a la derecha */
-  top: 15px;                 /* completamente arriba */
-  z-index: 2000;             /* por encima de todo */
-  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 3000;
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -103,36 +103,7 @@ nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
-/* --- SOLO EN MÓVILES --- */
-@media (max-width: 800px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  nav ul {
-    position: fixed;
-    top: 60px;               /* debajo del botón */
-    right: 10px;
-    background: rgba(255,255,255,0.95);
-    flex-direction: column;
-    padding: 15px;
-    border-radius: 10px;
-    width: 180px;
-    text-align: right;
-    display: none;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li a {
-    color: #004aad;
-    font-weight: 600;
-  }
-}
-
-/* MAIN */
+/* --- CONTENIDO PRINCIPAL --- */
 main {
   position: relative;
   z-index: 1;
@@ -150,7 +121,7 @@ main {
   margin-bottom: 40px;
 }
 
-/* Transiciones entre secciones */
+/* --- TRANSICIONES ENTRE SECCIONES --- */
 .hidden {
   display: none;
   opacity: 0;
@@ -163,7 +134,7 @@ main {
   transition: opacity 0.4s ease;
 }
 
-/* Productos */
+/* --- PRODUCTOS --- */
 .productos {
   display: flex;
   flex-wrap: wrap;
@@ -202,7 +173,7 @@ main {
   font-size: 0.95rem;
 }
 
-/* Formulario */
+/* --- FORMULARIO --- */
 form label {
   display: block;
   margin: 15px 0 6px;
@@ -236,7 +207,7 @@ form button:hover {
   background-color: #002f6c;
 }
 
-/* Footer */
+/* --- FOOTER --- */
 footer.contenido-transparente {
   text-align: center;
   font-size: 0.9rem;
@@ -245,39 +216,7 @@ footer.contenido-transparente {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Responsive */
-@media (max-width: 800px) {
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: rgba(0,0,0,0.85);
-    padding: 20px;
-    border-radius: 10px;
-    flex-direction: column;
-    width: 180px;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .productos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .producto {
-    width: 90%;
-  }
-}
-
-/* --- Subtítulos de categorías del catálogo --- */
+/* --- SUBTÍTULOS DE CATEGORÍAS --- */
 .subtitulo-categoria {
   text-align: left;
   color: #004aad;
@@ -288,24 +227,40 @@ footer.contenido-transparente {
   font-weight: 700;
 }
 
-
-
-body {
-  background-image: url('C:\Users\Estudio\Desktop\pagina\assest\img\fondo.jpg');
-  background-size: cover;       /* Ajusta la imagen al tamaño de la pantalla */
-  background-repeat: no-repeat; /* Evita que se repita */
-  background-attachment: fixed; /* Hace que la imagen quede fija al hacer scroll */
-  background-position: center;  /* Centra la imagen */
-}
-
-/* --- Ajustes para versión móvil --- */
+/* --- MENÚ MÓVIL SUPERPUESTO --- */
 @media (max-width: 800px) {
+  .menu-toggle {
+    display: flex;
+  }
 
-  /* Fondo más opaco para buena visibilidad en pantallas pequeñas */
-  .contenido-transparente {
-    background: rgba(255, 255, 255, 0.95);
-    color: #111;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  nav ul {
+    position: fixed; /* se superpone al contenido */
+    top: 60px;
+    right: 10px;
+    background: rgba(255,255,255,0.97);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 2500;
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  nav ul.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav ul li a {
+    color: #004aad;
+    font-weight: 600;
+    padding: 10px 0;
+    text-decoration: none;
   }
 
   header {
@@ -317,99 +272,18 @@ body {
     font-size: 1.8rem;
   }
 
-  nav ul {
+  .contenido-transparente {
     background: rgba(255, 255, 255, 0.95);
+    color: #111;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   }
 
-  nav ul li a {
-    color: #004aad;
-    font-weight: 600;
-  }
-
-  /* Menú desplegable más visible */
-  nav ul.active {
-    display: flex;
+  .productos {
     flex-direction: column;
-    text-align: center;
-    gap: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    align-items: center;
   }
 
-  /* Mejoras visuales de transición */
-  .visible {
-    display: block !important;
-    opacity: 1 !important;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .hidden {
-    display: none !important;
-    opacity: 0 !important;
-  }
-
-  /* Botón más accesible */
-  .menu-toggle {
-    top: 25px;
-  }
-}
-
-/* --- MENÚ HAMBURGUESA FIJO Y FUNCIONAL --- */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 2000;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
-}
-
-.menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.menu-toggle .bar {
-  width: 28px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 3px;
-}
-
-/* --- MENÚ DESPLEGABLE MÓVIL --- */
-@media (max-width: 800px) {
-  nav ul {
-    display: none;
-    position: fixed;
-    top: 70px; /* debajo del botón */
-    right: 10px;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    z-index: 1500;
-    width: 200px;
-    text-align: right;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li a {
-    color: #004aad;
-    padding: 10px;
-    font-weight: 600;
-  }
-
-  .menu-toggle {
-    display: flex;
+  .producto {
+    width: 90%;
   }
 }
