@@ -1,17 +1,71 @@
-<!DOCTYPE html
+<!DOCTYPE html <html lang="es">
+
 <html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página</title>
+  <style>
+    body {
+      background-image: url('assest/img/fondo1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Logo */
+    .logo {
+      width: 220px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    /* Título */
+    h1 {
+      color: white;
+      margin-top: 100px;
+    }
+
+    /* --- Ajustes para pantallas pequeñas (celulares) --- */
+    @media (max-width: 600px) {
+      .logo {
+        width: 140px; /* se hace más pequeño en móvil */
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="assest/img/logo del poli.webp" alt="logo del poli" class="logo">
+  <h1>Bienvenido a mi página</h1>
+</body>
+
+</html>
+
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Empresa Policatos</title>
-  <meta name="description" content="Empresa Policatos - pagina informativa sobre los productos que nos brinda la institución.">
+  <meta name="description"
+    content="Empresa Policatos - pagina informativa sobre los productos que nos brinda la institución.">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="overlay"></div>
 
   <header>
-    <h1>Policatos</h1>
+    <h1>Empresa Policatos</h1>
     <nav>
       <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
@@ -25,141 +79,208 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <section id="empresa" class="contenido-transparente visible">
       <h2>Sobre Nosotros</h2>
-      <p>
+      <p style="margin-bottom: 20px;">
+        </article>
         pagina informativa sobre los productos que nos brinda la institución.
       </p>
+      <header style="display: flex; justify-content: flex-start; aling-items:center;">
+        <article class="empresa">
+          <div style="display: flex; gap: 10px;">
+            <img src="assest\img\costos.png" alt="si" width="300" height="auto">
+            <p>brindar los precios de los productos.</p>
+            <img src="assest\img\productos.png" alt="si" width="300" height="auto">
+            <p>que los usuarios puedan ver los productos disponibles.</p>
+          </div>
+
+      </header>
+      </article>
+
+    </section>
+
+
+    <section id="catalogo" class="contenido-transparente hidden">
+      <h2>Catálogo de Productos</h2>
+
+      <!-- Sección de Alimentos -->
+      <h3 class="subtitulo-categoria">Alimentos</h3>
+      <div class="productos">
+
+        <article class="producto">
+          <img src="assest\img\mani.jpg">
+          <h4>mani</h4>
+          <p>mani</p>
+        </article>
+
+        <article class="producto">
+          <img src="assest\img\mentas.jpg" />
+          <h4>mentas</h4>
+          <p>mentas refrescantes</p>
+        </article>
+
+
+        <article class="producto">
+          <img src="assest\img\platanitos.jpg" />
+          <h4>platanos fritos</h4>
+          <p>platanos maduros fritos</p>
+        </article>
+
+        <article class="producto">
+          <img src="assest\img\papas y empanadas.jpg" />
+          <h4>papas rellenas</h4>
+          <p>papas rellenas de carne</p>
+        </article>
+
+
+
+        <article class="producto">
+          <img src="assest\img\ticos.jpg" />
+          <h4>ticos</h4>
+          <p>frituas de fecula de maiz</p>
+        </article>
+
+
+        <article class="producto">
+          <img src="assest\img\40104da8-bfbb-4834-b4e3-2fdf0331d6cc.jpg" alt="Pan artesanal" />
+          <h4>Tosti empanadas</h4>
+          <p>Tosti empanadas, un delicioso snack crujiente y dorado, relleno de sabores tradicionales como carne, pollo
+            o queso.</p>
+        </article>
+
+        <article class="producto">
+          <img src="assest\img\frituras.jpg" />
+          <h4>frituras</h4>
+          <p>papas fritas con diferentes sabores</p>
+        </article>
+
+        <article class="producto">
+          <img src="assest\img\dfbe371c-c59d-495f-974d-761bb7c28be5.jpg" alt="chocolate jumbo" />
+          <h4>Chocolate jumbo</h4>
+          <p>Deliciosa barra de chocolate con mani.</p>
+        </article>
+
+
+        <article class="producto">
+          <img src="assest\img\22ec3285-e917-4992-863d-906ff4dde74b.jpg" alt="Golpe con todo" />
+          <h4>Golpe con todo</h4>
+          <p>comida rapida llena de sabor y energia, una combinacion perfecta de arroz, carne, huevo, maduro y
+            salchicha.</p>
+        </article>
+
+        <article class="producto">
+          <img src="assest\img\3bcb65fb-e189-4e37-aeee-8ba4d1a72286.jpg" alt="Torta de vainilla" />
+          <h4>Trolli</h4>
+          <p>dulces divertidos y llenos de sabor, vienen en colores y presentaciones diferentes.</p>
+        </article>
+
+        <article class="producto">
+          <img src="assest\img\a439f4ee-10b7-48dc-93e2-c3f04c2e37ac.jpg" alt="Empanadas rellenas" />
+          <h4>palomitas de caramelo</h4>
+          <p>deliciosas palomitas de caramelos.</p>
+        </article>
+
+        <article class="producto">
+          <img src="assest\img\df73c6fe-9423-475c-9655-02a7c4742c8c.jpg" alt="Golosia" />
+          <h4>Golosia</h4>
+          <p>dulce y delicioso que combina sabor y texturas.</p>
+        </article>
+      </div>
     </section>
 
     <section id="catalogo" class="contenido-transparente hidden">
-  <h2>Catálogo de Productos</h2>
+      <h2>Catálogo de Productos</h2>
+      <!-- Sección de Bebidas -->
+      <h3 class="subtitulo-categoria">Bebidas</h3>
+      <div class="productos">
 
-  <!-- Sección de Alimentos -->
-  <h3 class="subtitulo-categoria">Alimentos</h3>
-  <div class="productos">
+        <article class="producto">
+          <img src="assest\img\f947d392-d948-41f4-bf34-5489c08e0d0a.jpg" />
+          <h4>Gatorade</h4>
+          <p>Refrescante bebida energizante.</p>
+        </article>
 
-     <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\mani.jpg" />
-      <h4>mani</h4>
-      <p>mani</p>
-    </article>
+        <article class="producto">
+          <img src="assest\img\f17026dc-7e2b-4c4e-8586-0e297e29783e.jpg" alt="Vive 100" />
+          <h4>vive 100</h4>
+          <p>bebida energizante 100% colombiana.</p>
+        </article>
 
-<article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\mentas.jpg" />
-      <h4>mentas</h4>
-      <p>mentas refrescantes</p>
-    </article>
+        <article class="producto">
+          <img src="assest\img\gaseosa colombiana.webp" alt="Vive 100" />
+          <h4>colombiana</h4>
+          <p>bebida gaseosa tipica colombiana.</p>
+        </article>
 
+        <article class="producto">
+          <img src="assest\img\poni malta.jpg" />
+          <h4>Malteada</h4>
+          <p>Malteada gaseosa tipica de colombia.</p>
+        </article>
 
-<article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\platanitos.jpg" />
-      <h4>platanos fritos</h4>
-      <p>platanos maduros fritos</p>
-    </article>
+        <article class="producto">
+          <img src="assest\img\manzana.jpg" alt="Té verde frío" />
+          <h4>manzana</h4>
+          <p>bebida gaseosa con sabor a manzana.</p>
+        </article>
 
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\papas y empanadas.jpg" />
-      <h4>papas rellenas</h4>
-      <p>papas rellenas de carne</p>
-    </article>
-
-
-    
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\ticos.jpg" />
-      <h4>ticos</h4>
-      <p>frituas de fecula de maiz</p>
-    </article>
-
-
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\40104da8-bfbb-4834-b4e3-2fdf0331d6cc.jpg" alt="Pan artesanal" />
-      <h4>Tosti empanadas</h4>
-      <p>Tosti empanadas, un delicioso snack crujiente y dorado, relleno de sabores tradicionales como carne, pollo o queso.</p>
-    </article>
-
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\frituras.jpg" />
-      <h4>frituras</h4>
-      <p>papas fritas con diferentes sabores</p>
-    </article>
-
-     <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\dfbe371c-c59d-495f-974d-761bb7c28be5.jpg" alt="chocolate jumbo" />
-      <h4>Chocolate jumbo</h4>
-      <p>Deliciosa barra de chocolate con mani.</p>
-    </article>
+        <article class="producto">
+          <img src="assest\img\jugo hit.jpg" alt="Refresco artesanal" />
+          <h4>jugo hit</h4>
+          <p>bebida natural con sabores de diferentes frutas.</p>
+        </article>
+      </div>
+    </section>
 
 
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\22ec3285-e917-4992-863d-906ff4dde74b.jpg" alt="Golpe con todo" />
-      <h4>Golpe con todo</h4>
-      <p>comida rapida llena de sabor y energia, una combinacion perfecta de arroz, carne, huevo, maduro y salchicha.</p>
-    </article>
 
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\3bcb65fb-e189-4e37-aeee-8ba4d1a72286.jpg" alt="Torta de vainilla" />
-      <h4>Trolli</h4>
-      <p>dulces divertidos y llenos de sabor, vienen en colores y presentaciones diferentes.</p>
-    </article>
 
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\a439f4ee-10b7-48dc-93e2-c3f04c2e37ac.jpg" alt="Empanadas rellenas" />
-      <h4>palomitas de caramelo</h4>
-      <p>deliciosas palomitas de caramelos.</p>
-    </article>
+    <section id="catalogo" class="contenido-transparente hidden">
+      <h2>Catálogo de Productos</h2>
+      <h3 class="subtitulo-categoria">Cremas</h3>
+      <div class="productos">
 
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\df73c6fe-9423-475c-9655-02a7c4742c8c.jpg" alt="Golosia" />
-      <h4>Golosia</h4>
-      <p>dulce y delicioso que combina sabor y texturas.</p>
-    </article>
-  </div>
+        <article class="producto">
+          <img src="assest\img\cono 2.jpg" />
+          <h4>Bocatto</h4>
+          <p>Helado de tres leches.</p>
+        </article>
 
-  <!-- Sección de Bebidas -->
-  <h3 class="subtitulo-categoria">Bebidas</h3>
-  <div class="productos">
+        <article class="producto">
+          <img src="assest\img\helados jet.jpg" alt="helado jet" />
+          <h4>Helados jet</h4>
+          <p>Helados de chocolate.</p>
+        </article>
 
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\f947d392-d948-41f4-bf34-5489c08e0d0a.jpg" />
-      <h4>Gatorade</h4>
-      <p>Refrescante bebida energizante.</p>
-    </article>
+        <article class="producto">
+          <img src="assest\img\dracula.png" alt="helado dracula" />
+          <h4>Helado dracula</h4>
+          <p>helado draculacon difrerentes sabores.</p>
+        </article>
 
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\f17026dc-7e2b-4c4e-8586-0e297e29783e.jpg" alt="Vive 100" />
-      <h4>vive 100</h4>
-      <p>bebida energizante 100% colombiana.</p>
-    </article>
+        <article class="producto">
+          <img src="assest\img\cono.jpg" />
+          <h4>Chococono</h4>
+          <p>delicioso helado de chococono.</p>
+        </article>
 
-    <article class="producto">
-      <img src="C:\Users\Estudio\Desktop\pagina\assest\img\f17026dc-7e2b-4c4e-8586-0e297e29783e.jpg" alt="Vive 100" />
-      <h4>vive 100</h4>
-      <p>bebida energizante 100% colombiana.</p>
-    </article>
+        <article class="producto">
+          <img src="assest\img\bonice.webp" />
+          <h4>Bonice</h4>
+          <p>refrescante helado de sabor.</p>
+        </article>
 
-    <article class="producto">
-      <img src="productos/malteada.jpg" alt="Malteada de chocolate" />
-      <h4>Malteada de chocolate</h4>
-      <p>Malteada cremosa elaborada con helado artesanal.</p>
-    </article>
+        <article class="producto">
+          <img src="assest\img\aloha.webp" />
+          <h4>Aloha</h4>
+          <p>Helado de limon.</p>
+        </article>
+      </div>
+    </section>
+    </header>
 
-    <article class="producto">
-      <img src="productos/te-verde.jpg" alt="Té verde frío" />
-      <h4>Té verde frío</h4>
-      <p>Bebida saludable con antioxidantes y sabor natural.</p>
-    </article>
 
-    <article class="producto">
-      <img src="productos/refresco.jpg" alt="Refresco artesanal" />
-      <h4>Refresco artesanal</h4>
-      <p>Gaseosa artesanal con frutas tropicales y bajo contenido de azúcar.</p>
-    </article>
-  </div>
-</section>
 
 
     <section id="contacto" class="contenido-transparente hidden">
@@ -186,7 +307,5 @@
 
   <script src="scripts.js"></script>
 </body>
+
 </html>
-
-
-
