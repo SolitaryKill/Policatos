@@ -12,9 +12,11 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   position: relative;
-  overflow-x: hidden;
-  background: url('fondo.jpg') no-repeat center center fixed;
+  overflow-x: hidden; /* solo horizontal */
+  overflow-y: auto;   /* permitir scroll vertical */
+  background: url('fondo1.jpg') no-repeat center center fixed;
   background-size: cover;
+  text-align: center;
 }
 
 /* --- CAPA OSCURA DE FONDO --- */
@@ -26,6 +28,7 @@ html {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
+  pointer-events: none; /* permite interactuar con contenido */
 }
 
 /* --- HEADER --- */
@@ -33,16 +36,34 @@ header {
   position: relative;
   z-index: 1;
   background: transparent;
-  padding: 25px 0;
+  padding: 25px 20px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-  margin-bottom: 30px;
 }
 
+/* --- NOMBRE DE LA PÁGINA --- */
 header h1 {
   font-size: 2.8rem;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  font-family: 'Great Vibes', cursive; /* fuente personalizada solo para el nombre */
+}
+
+/* --- LOGOS --- */
+.logo-pc {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.logo-movil {
+  display: none;
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 
 /* --- NAVEGACIÓN --- */
@@ -51,6 +72,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 nav ul {
@@ -75,7 +97,7 @@ nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-/* --- BOTÓN MENÚ HAMBURGUESA --- */
+/* --- MENÚ HAMBURGUESA --- */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -89,11 +111,6 @@ nav ul li a:hover {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
-}
-
-.menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .menu-toggle .bar {
@@ -101,7 +118,6 @@ nav ul li a:hover {
   height: 3px;
   background-color: #fff;
   border-radius: 5px;
-  transition: all 0.3s ease;
 }
 
 /* --- CONTENIDO PRINCIPAL --- */
@@ -115,24 +131,25 @@ main {
 
 .contenido-transparente {
   background: rgba(127, 255, 144, 0.529);
-  color: #000000;
+  color: #000;
   padding: 25px 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 40px;
 }
 
-/* --- TRANSICIONES ENTRE SECCIONES --- */
-.hidden {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+/* --- SECCIÓN SOBRE NOSOTROS ADAPTATIVA --- */
+.empresa {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.visible {
-  display: block;
-  opacity: 1;
-  transition: opacity 0.4s ease;
+.empresa div {
+  flex: 1;
+  min-width: 280px;
 }
 
 /* --- PRODUCTOS --- */
@@ -163,14 +180,15 @@ main {
   object-fit: cover;
 }
 
-.producto h3 {
+.producto h3,
+.producto h4 {
   margin: 15px;
   color: #ed6b1a;
 }
 
 .producto p {
   margin: 0 15px 15px;
-  color: #111111;
+  color: #111;
   font-size: 0.95rem;
 }
 
@@ -201,7 +219,6 @@ form button {
   font-size: 1.2rem;
   cursor: pointer;
   font-weight: 700;
-  transition: background-color 0.3s ease;
   box-shadow: 0 6px 14px rgba(0, 74, 173, 0.7);
 }
 
@@ -218,7 +235,7 @@ footer.contenido-transparente {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* --- SUBTÍTULOS DE CATEGORÍAS --- */
+/* --- SUBTÍTULOS --- */
 .subtitulo-categoria {
   text-align: left;
   color: #004aad;
@@ -229,7 +246,7 @@ footer.contenido-transparente {
   font-weight: 700;
 }
 
-/* --- MENÚ MÓVIL SUPERPUESTO --- */
+/* --- MEDIA QUERIES PARA MÓVIL --- */
 @media (max-width: 800px) {
   .menu-toggle {
     display: flex;
@@ -237,7 +254,6 @@ footer.contenido-transparente {
 
   nav ul {
     position: fixed;
-    /* se superpone al contenido */
     top: 60px;
     right: 10px;
     background: rgba(255, 255, 255, 0.97);
@@ -246,11 +262,11 @@ footer.contenido-transparente {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-    z-index: 2500;
     display: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
     transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2500;
   }
 
   nav ul.active {
@@ -263,22 +279,10 @@ footer.contenido-transparente {
     color: #004aad;
     font-weight: 600;
     padding: 10px 0;
-    text-decoration: none;
-  }
-
-  header {
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: none;
   }
 
   header h1 {
     font-size: 1.8rem;
-  }
-
-  .contenido-transparente {
-    background: rgba(255, 255, 255, 0.95);
-    color: #111;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   }
 
   .productos {
@@ -290,34 +294,12 @@ footer.contenido-transparente {
     width: 90%;
   }
 
-}
+  /* Logos adaptativos */
+  .logo-pc {
+    display: none;
+  }
 
-body {
-  background-image: url('fondo1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no repeat;
-}
-
-.caja {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-p {
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-}
-
-.logo {
-  width: 500px;
-  height: auto;
-  margin-right: 100px;
-  vertical-align: middle;
-  background-color: #ffffffbd;
-  padding: 10px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
+  .logo-movil {
+    display: inline;
+  }
 }
